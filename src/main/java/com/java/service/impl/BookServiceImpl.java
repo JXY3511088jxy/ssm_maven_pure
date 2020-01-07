@@ -2,6 +2,7 @@ package com.java.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.java.mapper.BookMapper;
+import com.java.pojo.Book;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,15 +27,15 @@ public class BookServiceImpl implements com.java.service.BookService {
      * @return
      */
     @Override
-    public List<Map<String,Object>> findBooks(Integer pageNum, Integer pageSize){
+    public List<Book> findBooks(){
 
-        try {
-            //分页
-            PageHelper.startPage(pageNum,pageSize);
-        }catch (NullPointerException e){
-            e.printStackTrace();
-        }
-        return bookMapper.selectBooks();
+        return bookMapper.list();
+    }
+
+    @Override
+    public Book query(int id) {
+
+        return null;
     }
 
 

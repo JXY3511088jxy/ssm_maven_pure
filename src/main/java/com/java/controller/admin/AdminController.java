@@ -1,9 +1,11 @@
 package com.java.controller.admin;
 
 import com.github.pagehelper.PageInfo;
+import com.java.pojo.Book;
 import com.java.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -29,13 +31,21 @@ public class AdminController {
     }
 
     @RequestMapping("/getBooks")
-    public @ResponseBody List<Map<String,Object>> getBooks(Integer pageNum, Integer pageSize){
+    public @ResponseBody List<Book> getBooks(){
 
-        List<Map<String, Object>> bookList = bookService.findBooks(pageNum, pageSize);
-        PageInfo<Map<String, Object>> pageInfo = new PageInfo<>(bookList);
+        List<Book> bookList = bookService.findBooks();
 
-        return pageInfo.getList();
+        return bookList;
 
+    }
+
+
+    @RequestMapping("/listBooks")
+    public String listBooks(Model model){
+        List<Book> bookList = bookService.findBooks();
+        model.addAttribute("bookList1",bookList);
+        //往前台传数据，可以传对象，可以传List，通过el表达式 ${}可以获取到，类似于request.setAttribute("sts",sts)效果一样。
+        return "admin/listBook";
     }
 
 }

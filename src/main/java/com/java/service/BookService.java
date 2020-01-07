@@ -1,5 +1,7 @@
 package com.java.service;
 
+import com.java.pojo.Book;
+
 import java.util.List;
 import java.util.Map;
 
@@ -9,5 +11,6 @@ import java.util.Map;
  * date：17:20
  */
 public interface BookService {
-    List<Map<String,Object>> findBooks(Integer pageNum, Integer pageSize);
+    List<Book> findBooks();
+    Book query(int id);
 }
