@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="person_info@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="person_info">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="firepig"/>
+    <schema id="4" parent="1" name="forum"/>
+    <schema id="5" parent="1" name="hd"/>
+    <schema id="6" parent="1" name="hotel"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="invoicing"/>
+    <schema id="9" parent="1" name="jeesite"/>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="new_schema"/>
+    <schema id="12" parent="1" name="performance_schema"/>
+    <schema id="13" parent="1" name="sakila"/>
+    <schema id="14" parent="1" name="shiro"/>
+    <schema id="15" parent="1" name="springdata"/>
+    <schema id="16" parent="1" name="ssm"/>
+    <schema id="17" parent="1" name="sys"/>
+    <schema id="18" parent="1" name="txhouse"/>
+    <schema id="19" parent="1" name="world"/>
+    <schema id="20" parent="1" name="youxiao"/>
+    <schema id="21" parent="1" name="zgn"/>
+    <table id="22" parent="2" name="books"/>
+    <table id="23" parent="2" name="computers"/>
+    <table id="24" parent="2" name="husband"/>
+    <table id="25" parent="2" name="orders"/>
+    <table id="26" parent="2" name="persons"/>
+    <table id="27" parent="2" name="students"/>
+    <table id="28" parent="2" name="users"/>
+    <table id="29" parent="2" name="wife"/>
+    <routine id="30" parent="2" name="pro_insert">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="31" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="32" parent="22" name="bookName">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="33" parent="22" name="price">
+      <Position>3</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="34" parent="22" name="num">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="35" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="23" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="23" name="brand">
+      <Position>2</Position>
+      <Comment>名牌</Comment>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="38" parent="23" name="price">
+      <Position>3</Position>
+      <Comment>价格</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="39" parent="23" name="runMem">
+      <Position>4</Position>
+      <Comment>内存</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="40" parent="23" name="cpu">
+      <Position>5</Position>
+      <Comment>cpu类型</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="41" parent="23" name="xianKa">
+      <Position>6</Position>
+      <Comment>显卡</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="42" parent="23" name="status">
+      <Position>7</Position>
+      <Comment>1 显示  0隐藏</Comment>
+      <DataType>varchar(2)|0</DataType>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <key id="43" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="24" name="husid">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="45" parent="24" name="age">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="46" parent="24" name="gender">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="47" parent="24" name="husbandname">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="48" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>husid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="49" parent="25" name="orderId">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="50" parent="25" name="remark">
+      <Position>2</Position>
+      <Comment>订单描述</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="51" parent="25" name="orderNo">
+      <Position>3</Position>
+      <Comment>订单编号</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="52" parent="25" name="cost">
+      <Position>4</Position>
+      <Comment>订单价格</Comment>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="53" parent="25" name="createTime">
+      <Position>5</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="54" parent="25" name="userId">
+      <Position>6</Position>
+      <Comment>用户id(购买者)</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <key id="55" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>orderId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="56" parent="26" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="57" parent="26" name="uName">
+      <Position>2</Position>
+      <Comment>姓名</Comment>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="58" parent="26" name="birthday">
+      <Position>3</Position>
+      <Comment>生日</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="59" parent="26" name="gender">
+      <Position>4</Position>
+      <Comment>1男  0女</Comment>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="60" parent="26" name="zhiYe">
+      <Position>5</Position>
+      <Comment>1程序猿  2攻城狮</Comment>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="61" parent="26" name="address">
+      <Position>6</Position>
+      <Comment>住所</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="62" parent="26" name="phone">
+      <Position>7</Position>
+      <Comment>手机号</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <key id="63" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="64" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="65" parent="27" name="age">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="66" parent="27" name="name">
+      <Position>3</Position>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="67" parent="27" name="phone">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="68" parent="27" name="score">
+      <Position>5</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <key id="69" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="70" parent="28" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="71" parent="28" name="uName">
+      <Position>2</Position>
+      <Comment>用户名</Comment>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="72" parent="28" name="phone">
+      <Position>3</Position>
+      <Comment>手机号</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="73" parent="28" name="address">
+      <Position>4</Position>
+      <Comment>地址</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="74" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="75" parent="29" name="wifeid">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="76" parent="29" name="nianlin">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="77" parent="29" name="sex">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="78" parent="29" name="wifename">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="79" parent="29" name="hid">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="80" parent="29" name="FK37AF114DB298FF">
+      <ColNames>hid</ColNames>
+    </index>
+    <key id="81" parent="29" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>wifeid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <argument id="82" parent="30" name="n">
+      <DataType>varchar(40)|0</DataType>
+    </argument>
+    <argument id="83" parent="30" name="m">
+      <DataType>varchar(2)|0</DataType>
+    </argument>
+    <argument id="84" parent="30" name="i">
+      <DataType>int(11)|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>
