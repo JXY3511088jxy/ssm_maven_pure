@@ -10,6 +10,8 @@
 	<title>前台首页</title>
 </head>
 <body>
-	<h1>祝愿ssm整合一切顺利</h1>
+	<h1>整合成功了</h1>
+	<a href="/login"><strong>点击跳转到登录页面</strong></a>
+
 </body>
 </html>

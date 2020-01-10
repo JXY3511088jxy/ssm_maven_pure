@@ -5,7 +5,7 @@
 
 <mapper namespace="com.java.mapper.BookMapper">
     <insert id="add" parameterType="Book" >
-            insert into books ( name ) values (#{name})
+            insert into books ( bookName ) values (#{name})
         </insert>
 
     <delete id="delete" parameterType="Book" >
@@ -17,7 +17,7 @@
         </select>
 
     <update id="update" parameterType="Book" >
-            update books set name=#{name} where id=#{id}
+            update books set bookName=#{name} where id=#{id}
         </update>
     <select id="list" resultType="Book">
         select * from   books
