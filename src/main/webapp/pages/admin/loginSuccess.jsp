@@ -13,12 +13,26 @@
     <base href="<%=basePath %>">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>登录成功</title>
+    <style>
+        body{
+            background: lemonchiffon;
+        }
+        .login_success{
+            margin-top: 120px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<h1>登录成功</h1>
-当前登录用户为：${currentUser.uName}
-<br>
-<a href="/admin/listBooks">书籍列表查询</a>
+
+<div class="login_success">
+    <h1>登录成功</h1>
+    当前登录用户为：${currentUser.uName}
+    <br>
+    <br>
+    <a href="/listBooks">书籍列表查询</a>
+</div>
+
 <%
     User user = (User)session.getAttribute("currentUser");
     System.out.println("用户姓名为："+user.getuName());//这个是打印到控制台

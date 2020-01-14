@@ -16,8 +16,19 @@
     <!--配置包扫描-->
     <context:component-scan base-package="com.java.*" />
 
+    <!--启动注解识别-->
+    <context:annotation-config/>
+
+    <!--开通静态资源的访问-->
+    <mvc:default-servlet-handler />
+
     <!--开启springmvc注解驱动-->
     <mvc:annotation-driven />
+
+    <!--location元素表示webapp目录下的img包下的所有文件；
+        mapping元素表示以/static开头的所有请求路径，如/img/a或者/img/b；
+        该配置的作用是：DispatcherServlet不会拦截以/img开头的所有请求路径，并当作静态资源交由Servlet处理。-->
+    <mvc:resources location="pages/img" mapping="/img/**"/>
 
     <!--配置视图解析器:InternalResourceViewResolver-->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -35,6 +46,5 @@
         <property name="maxUploadSize" value="10485760"></property>
     </bean>
 
-    <!--配置定时器任务(可以暂时不写)-->
 
 </beans>

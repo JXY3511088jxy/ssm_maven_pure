@@ -18,7 +18,6 @@ import java.util.Map;
  * date：17:12
  */
 @Controller
-@RequestMapping("/admin")
 public class AdminController {
 
     @Autowired
