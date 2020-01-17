@@ -20,7 +20,8 @@
 
 <a href="css/style.css">点击打开css</a>
 <div class="nomal">
-    <input type="button" value="新增" onclick="javascrtpt:window.location.href='addbooks'">
+    <!--这个button跳转的路径要按照设置的根访问路径添加-->
+    <input type="button" value="新增" onclick="javascrtpt:window.location.href='pages/admin/addbook.jsp'">
     <table align='center' border='1' cellspacing='0'>
         <tr>
             <td>序号</td>

@@ -14,4 +14,5 @@ public interface BookService {
     List<Book> findBooks();
     Book query(int id);
     void delete(int id);
+    void add(Book book);
 }

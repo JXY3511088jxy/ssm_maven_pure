@@ -51,9 +51,16 @@ public class AdminController {
     }
 
     @RequestMapping("/deleteBooks")
-    public String deletebooks(int id){
+    public String deleteBooks(int id){
         bookService.delete(id);
         return "redirect:/listBooks";
     }
 
+    @RequestMapping("/addBooks")
+    public String addBooks(Model model,Book book){
+        if(book != null){
+            bookService.add(book);
+        }
+        return "redirect:/listBooks";
+    }
 }

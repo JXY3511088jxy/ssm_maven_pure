@@ -43,5 +43,10 @@ public class BookServiceImpl implements com.java.service.BookService {
         bookMapper.delete(id);
     }
 
+    @Override
+    public void add(Book book) {
+        bookMapper.add(book);
+    }
+
 
 }

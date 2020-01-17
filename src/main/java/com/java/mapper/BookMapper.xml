@@ -5,7 +5,7 @@
 
 <mapper namespace="com.java.mapper.BookMapper">
     <insert id="add" parameterType="Book" >
-            insert into books ( bookName ) values (#{name})
+            insert into books ( bookName,price,num ) values (#{bookName},#{price},#{num})
         </insert>
 
     <delete id="delete" parameterType="int" >
