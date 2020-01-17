@@ -13,4 +13,5 @@ import java.util.Map;
 public interface BookService {
     List<Book> findBooks();
     Book query(int id);
+    void delete(int id);
 }

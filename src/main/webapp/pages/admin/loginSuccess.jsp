@@ -30,7 +30,7 @@
     当前登录用户为：${currentUser.uName}
     <br>
     <br>
-    <a href="/listBooks">书籍列表查询</a>
+    <a href="listBooks">书籍列表查询</a>
 </div>
 
 <%

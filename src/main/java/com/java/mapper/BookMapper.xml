@@ -8,7 +8,7 @@
             insert into books ( bookName ) values (#{name})
         </insert>
 
-    <delete id="delete" parameterType="Book" >
+    <delete id="delete" parameterType="int" >
             delete from books where id= #{id}
         </delete>
 

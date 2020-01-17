@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -47,6 +48,12 @@ public class AdminController {
         model.addAttribute("bookList1",bookList);
         //往前台传数据，可以传对象，可以传List，通过el表达式 ${}可以获取到，类似于request.setAttribute("sts",sts)效果一样。
         return "admin/listBook";
+    }
+
+    @RequestMapping("/deleteBooks")
+    public String deletebooks(int id){
+        bookService.delete(id);
+        return "redirect:/listBooks";
     }
 
 }
