@@ -15,4 +15,5 @@ public interface BookService {
     Book query(int id);
     void delete(int id);
     void add(Book book);
+    void update(Book book);
 }

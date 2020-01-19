@@ -37,7 +37,7 @@
                 <td>${c.bookName}</td>
                 <td>${c.price}</td>
                 <td>${c.num}</td>
-                <td><a href="updateBooks">编辑</a></td>
+                <td><a href="updatelistBooks?id=${c.id}">编辑</a></td>
                 <td><a href="deleteBooks?id=${c.id}">删除</a></td>
             </tr>
         </c:forEach>

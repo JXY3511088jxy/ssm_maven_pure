@@ -4,8 +4,10 @@ import com.github.pagehelper.PageHelper;
 import com.java.mapper.BookMapper;
 import com.java.pojo.Book;
 import org.apache.ibatis.annotations.Select;
+import org.codehaus.jackson.annotate.JsonTypeInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import sun.awt.image.IntegerInterleavedRaster;
 
 import java.util.List;
 import java.util.Map;
@@ -35,7 +37,7 @@ public class BookServiceImpl implements com.java.service.BookService {
     @Override
     public Book query(int id) {
 
-        return null;
+        return bookMapper.get(id);
     }
 
     @Override
@@ -46,6 +48,11 @@ public class BookServiceImpl implements com.java.service.BookService {
     @Override
     public void add(Book book) {
         bookMapper.add(book);
+    }
+
+    @Override
+    public void update(Book book) {
+        bookMapper.update(book);
     }
 
 

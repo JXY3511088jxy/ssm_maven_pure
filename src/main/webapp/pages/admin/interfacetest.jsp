@@ -12,7 +12,7 @@
 <head>
     <base href="<%=basePath %>">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>登录成功</title>
+    <title>接口测试</title>
     <style>
         body{
             background: lemonchiffon;
@@ -26,13 +26,11 @@
 <body>
 
 <div class="login_success">
-    <h1>登录成功</h1>
-    当前登录用户为：${currentUser.uName}
+    <h1>接口测试</h1>
     <br>
     <br>
-    <a href="listBooks">书籍列表查询</a>
-    <br>
-    <a href="showpage">接口测试</a>
+    接口地址：<input type="text" name="interfaceadd">
+    <input type="button" value="测试" onclick="javascrtpt:window.location.href='pages/admin/addbook.jsp'">
 </div>
 
 <%

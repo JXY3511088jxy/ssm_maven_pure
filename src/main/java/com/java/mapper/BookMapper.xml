@@ -12,12 +12,12 @@
             delete from books where id= #{id}
         </delete>
 
-    <select id="get" parameterType="_int" resultType="Book">
+    <select id="get" parameterType="int" resultType="Book">
             select * from   books  where id= #{id}
         </select>
 
-    <update id="update" parameterType="Book" >
-            update books set bookName=#{name} where id=#{id}
+    <update id="update" parameterType="Integer">
+            update books set bookName=#{bookName},price=#{price},num=#{num} where id=#{id}
         </update>
     <select id="list" resultType="Book">
         select * from   books
