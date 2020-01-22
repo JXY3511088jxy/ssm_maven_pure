@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" build-on-make="true" name="ssm_maven_pure:war exploded">
-    <output-path>$PROJECT_DIR$/target/ssm_maven_pure</output-path>
+    <output-path>$PROJECT_DIR$/target/ssm_maven_pure-1.0-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
