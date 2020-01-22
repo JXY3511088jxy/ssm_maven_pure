@@ -14,11 +14,11 @@
             text-align: center;
         }
     </style>
-
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/3.3.6/bootstrap.min.css" >
 </head>
 
 <body>
-<div class="back">
+
 <div class="login-panel">
     <p>
         <img src="pages/img/123.jpg" width="150" height="150">
@@ -27,10 +27,10 @@
     <form action="login" method="post">
         账号：<input type="text" name="uName"> <br/><br/>
         密码：<input type="password" name="password"> <br/><br/>
-        <input type="submit" value="登录">
+        <input type="submit" class="btn btn-success" value="登录">
     </form>
 </div>
-</div>
+
 </body>
 
 

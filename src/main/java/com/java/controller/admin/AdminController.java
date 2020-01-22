@@ -86,7 +86,7 @@ public class AdminController {
     }
 
     /**
-     * 修改页面展示
+     * 修改页面，将修改的数据取出来展示
      * @param model
      * @param id
      * @return

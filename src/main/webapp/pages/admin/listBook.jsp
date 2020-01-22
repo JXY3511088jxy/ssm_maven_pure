@@ -10,19 +10,26 @@
         所以controller的类路径最好不设置，不然容易出现资源访问不了，或者css样式不起作用的情况。、
         -->
     <link rel="stylesheet" type="text/css" href="css/style.css" >
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/3.3.6/bootstrap.min.css" >
 
 
 </head>
 
 <body>
 
-
+<script language="javascript">
+    function delcfm() {
+        if (!confirm("确认要删除？")) {
+            window.event.returnValue = false;
+        }
+    }
+</script>
 
 <a href="css/style.css">点击打开css</a>
 <div class="nomal">
     <!--这个button跳转的路径要按照设置的根访问路径添加-->
     <input type="button" value="新增" onclick="javascrtpt:window.location.href='pages/admin/addbook.jsp'">
-    <table align='center' border='1' cellspacing='0'>
+    <table class="success" align='center' border='1' cellspacing='0'>
         <tr>
             <td>序号</td>
             <td>书名</td>
@@ -38,7 +45,7 @@
                 <td>${c.price}</td>
                 <td>${c.num}</td>
                 <td><a href="updatelistBooks?id=${c.id}">编辑</a></td>
-                <td><a href="deleteBooks?id=${c.id}">删除</a></td>
+                <td><a href="deleteBooks?id=${c.id}" onclick="delcfm()">删除</a></td>
             </tr>
         </c:forEach>
     </table>

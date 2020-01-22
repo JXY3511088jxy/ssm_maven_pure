@@ -18,6 +18,7 @@
 </head>
 
 <body>
+
 <div class="back">
     <div class="login-panel">
         <h2>增加书籍</h2>
@@ -26,7 +27,7 @@
             书名：<input type="text" name="bookName"> <br/><br/>
              价格：<input type="text" name="price"> <br/><br/>
             数量：<input type="number" name="num"><br/><br/>
-            <input type="submit" value="提交">
+            <input type="submit" value="提交" >
         </form>
     </div>
 </div>
