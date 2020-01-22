@@ -30,6 +30,9 @@
     当前登录用户为：${currentUser.uName}
     <br>
     <br>
+    <a href="listusers">人员列表查询</a>
+    <br>
+    <br>
     <a href="listBooks">书籍列表查询</a>
     <br>
     <a href="showpage">接口测试</a>

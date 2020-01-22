@@ -10,14 +10,14 @@
         <result column="password" jdbcType="VARCHAR" property="password" />
     </resultMap>
     <insert id="add" parameterType="User" >
-            insert into users ( uName ) values (#{name})
+            insert into users ( uName,phone,address,password ) values (#{uName},#{phone},#{address},#{password})
         </insert>
 
-    <delete id="delete" parameterType="User" >
+    <delete id="delete" parameterType="int" >
             delete from users where id= #{id}
         </delete>
 
-    <select id="get" parameterType="_int" resultType="User">
+    <select id="get" parameterType="int" resultType="User">
             select * from   users  where id= #{id}
         </select>
 

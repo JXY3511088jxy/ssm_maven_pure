@@ -19,7 +19,7 @@ import java.util.Map;
  * date：
  */
 @Controller
-public class AdminController {
+public class BookController {
 
     @Autowired
     private BookService bookService;
