@@ -30,7 +30,7 @@
     <br>
     <br>
     接口地址：<input type="text" name="interfaceadd">
-    <input type="button" value="测试" onclick="javascrtpt:window.location.href='pages/admin/addbook.jsp'">
+    <input type="button" value="测试" onclick="javascrtpt:window.location.href='../books/addbook.jsp'">
 </div>
 
 <%

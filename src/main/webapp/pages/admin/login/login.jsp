@@ -24,7 +24,7 @@
         <img src="pages/img/123.jpg" width="150" height="150">
     </p>
     <h2>SMM项目集成系统</h2>
-    <form action="login" method="post">
+    <form action="" method="post">
         账号：<input type="text" name="uName"> <br/><br/>
         密码：<input type="password" name="password"> <br/><br/>
         <input type="submit" class="btn btn-success" value="登录">

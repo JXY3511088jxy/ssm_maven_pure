@@ -11,7 +11,7 @@ public class InterfaceController {
 
     @RequestMapping("/showpage")
     public String showpage(){
-        return "admin/interfacetest";
+        return "admin/interface/interfacetest";
     }
 
 }

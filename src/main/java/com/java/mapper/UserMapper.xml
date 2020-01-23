@@ -22,7 +22,7 @@
         </select>
 
     <update id="update" parameterType="User" >
-            update users set uName=#{name} where id=#{id}
+            update users set uName=#{uName},phone=#{phone},address=#{address},password=#{password} where id=#{id}
         </update>
     <select id="list" resultType="User">
         select * from   users

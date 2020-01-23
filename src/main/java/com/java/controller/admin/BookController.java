@@ -1,17 +1,14 @@
 package com.java.controller.admin;
 
-import com.github.pagehelper.PageInfo;
 import com.java.pojo.Book;
 import com.java.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * description：
@@ -58,7 +55,7 @@ public class BookController {
         List<Book> bookList = bookService.findBooks();
         model.addAttribute("bookList1",bookList);
         //往前台传数据，可以传对象，可以传List，通过el表达式 ${}可以获取到，类似于request.setAttribute("sts",sts)效果一样。
-        return "admin/listBook";
+        return "admin/books/listBook";
     }
 
     /**
@@ -82,7 +79,7 @@ public class BookController {
         if(book != null){
             bookService.add(book);
         }
-        return "redirect:/listBooks";  //重定向到书籍列表页面
+        return "redirect:listBooks";  //重定向到书籍列表页面
     }
 
     /**
@@ -95,7 +92,7 @@ public class BookController {
     public String updatelistBooks(Model model,int id){
         Book book = bookService.query(id);
         model.addAttribute("book",book);
-        return "admin/editbook";
+        return "admin/books/editbook";
     }
 
     /**

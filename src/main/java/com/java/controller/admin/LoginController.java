@@ -22,7 +22,7 @@ public class LoginController {
      */
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
-        return "admin/login";
+        return "admin/login/login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -33,14 +33,14 @@ public class LoginController {
                 //登录成功
                 session.setAttribute("currentUser", user);
                 //往session里面传值，指定参数名称
-                return "admin/loginSuccess";
+                return "admin/login/loginSuccess";
             } else {
                 model.addAttribute("message", "登录失败");
-                return "admin/login";
+                return "admin/login/login";
             }
         } else {
             model.addAttribute("message", "你输入的用户名或密码有误");
-            return "admin/login";
+            return "admin/login/login";
         }
     }
 }
