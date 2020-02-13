@@ -18,20 +18,19 @@
 </head>
 
 <body>
-<div class="back">
-    <div class="login-panel">
-        <h2>修改人员</h2>
-        <!--这个地方的路径要注意：如果不指定根路径，默认是在跳转过来的页面后面加上跳转路径，会报错！！-->
-        <form action="/ssm_maven_pure/updateUsers">
-            姓名：<input type="text" name="uName" value=${user.uName}> <br/><br/>
-            手机号：<input type="text" name="phone" value=${user.phone}> <br/><br/>
-            地址：<input type="text" name="address" value=${user.address}><br/><br/>
-            密码：<input type="text" name="password" value=${user.password}><br/><br/>
-            <input type="hidden" name="id" value="${user.id}">
-            <!--这个隐藏id的输入框一定要加上，不然提交的对象id为空，不会更新到列表中-->
-            <input type="submit" value="提交">
-        </form>
-    </div>
+<input type="button" value="返回上一页" onclick="javascrtpt:window.location.href='listusers'">
+<div class="login-panel">
+    <h2>修改人员</h2>
+    <!--这个地方的路径要注意：如果不指定根路径，默认是在跳转过来的页面后面加上跳转路径，会报错！！-->
+    <form action="/updateUsers">
+        姓名：<input type="text" name="uName" value=${user.uName} required="required"> <br/><br/>
+        手机号：<input type="text" name="phone" value=${user.phone} required="required"> <br/><br/>
+        地址：<input type="text" name="address" value=${user.address} required="required"><br/><br/>
+        密码：<input type="text" name="password" value=${user.password} required="required"<br/><br/>
+              <input type="hidden" name="id" value="${user.id}">
+        <!--这个隐藏id的输入框一定要加上，不然提交的对象id为空，不会更新到列表中-->
+        <input type="submit" value="提交">
+    </form>
 </div>
 </body>
 

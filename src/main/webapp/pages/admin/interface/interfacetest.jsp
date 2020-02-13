@@ -24,7 +24,7 @@
     </style>
 </head>
 <body>
-
+<input type="button" value="返回主页" onclick="javascrtpt:window.location.href='/pages/admin/login/loginSuccess.jsp'">
 <div class="login_success">
     <h1>接口测试</h1>
     <br>

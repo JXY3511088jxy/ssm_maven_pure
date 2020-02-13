@@ -3,6 +3,7 @@ package com.java.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.java.mapper.BookMapper;
 import com.java.pojo.Book;
+import com.java.service.BookService;
 import org.apache.ibatis.annotations.Select;
 import org.codehaus.jackson.annotate.JsonTypeInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ import java.util.Map;
  * date：17:18
  */
 @Service
-public class BookServiceImpl implements com.java.service.BookService {
+public class BookServiceImpl implements BookService {
 
     @Autowired
     private BookMapper bookMapper;
@@ -29,9 +30,14 @@ public class BookServiceImpl implements com.java.service.BookService {
      * @return
      */
     @Override
-    public List<Book> findBooks(){
+    public List<Book> listBooks(){
 
         return bookMapper.list();
+    }
+
+    @Override
+    public List<Book> findBook(Book book) {
+        return bookMapper.findbook(book);
     }
 
     @Override

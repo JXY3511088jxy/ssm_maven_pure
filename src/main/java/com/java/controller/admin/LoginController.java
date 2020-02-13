@@ -35,12 +35,18 @@ public class LoginController {
                 //往session里面传值，指定参数名称
                 return "admin/login/loginSuccess";
             } else {
-                model.addAttribute("message", "登录失败");
-                return "admin/login/login";
+                model.addAttribute("message", "登录失败");//这是传错误信息到前台
+                return "admin/login/login";//这个地方要改一下
             }
         } else {
             model.addAttribute("message", "你输入的用户名或密码有误");
             return "admin/login/login";
         }
+    }
+
+    @RequestMapping("/loginout")
+    public String loginout(HttpSession session) {
+        session.invalidate();    // 获取session信息，使session信息失效，直接返回登录界面，并连接跳转。
+        return "redirect:login";
     }
 }

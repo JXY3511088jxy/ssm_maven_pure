@@ -24,7 +24,7 @@
     </style>
 </head>
 <body>
-
+<input type="button" value="退出登录" onclick="javascrtpt:window.location.href='/loginout'">
 <div class="login_success">
     <h1>登录成功</h1>
     当前登录用户为：${currentUser.uName}

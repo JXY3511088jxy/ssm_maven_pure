@@ -32,4 +32,6 @@ public interface BookMapper {
 
     public List<Book> list();
 
+    public List<Book> findbook(Book book);
+
 }

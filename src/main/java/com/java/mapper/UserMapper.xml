@@ -28,6 +28,15 @@
         select * from   users
     </select>
 
+    <select id="finduser" parameterType="User" resultType="User">
+        select * from   users
+        <where>
+            <if test="uName != ''">uName = #{uName}</if>
+            <if test="phone != ''"> and phone = #{phone}</if>
+            <if test="address != ''">and address = #{address}</if>
+        </where>
+    </select>
+
     <select id="login" parameterType="java.lang.String" resultMap="BaseResultMap">
     select * from users where uName = #{uName,jdbcType=VARCHAR}
   </select>

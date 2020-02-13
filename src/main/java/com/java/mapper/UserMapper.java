@@ -18,5 +18,7 @@ public interface UserMapper {
 
     public List<User> list();
 
+    public List<User> finduser(User user);
+
     User login(String username);
 }

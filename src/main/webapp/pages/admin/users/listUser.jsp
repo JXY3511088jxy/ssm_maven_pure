@@ -26,9 +26,16 @@
 </script>
 
 <a href="css/style.css">点击打开css</a>
+<input type="button" value="返回主页" onclick="javascrtpt:window.location.href='/pages/admin/login/loginSuccess.jsp'">
 <div class="nomal">
-    <!--这个button跳转的路径要按照设置的根访问路径添加-->
-    <input type="button" value="新增" onclick="javascrtpt:window.location.href='pages/admin/users/adduser.jsp'">
+    <form action="findusers">
+        <!--这个button跳转的路径要按照设置的根访问路径添加-->
+        <input type="button" value="新增" onclick="javascrtpt:window.location.href='/pages/admin/users/adduser.jsp'">
+        用户名名：<input type="text" name="uName">
+        手机号：<input type="text" name="phone" size="12">
+        地址：<input type="text" name="address" size="12">
+        <input type="submit" value="查询">
+    </form>
     <table class="success" align='center' border='1' cellspacing='0'>
         <tr>
             <td>序号</td>

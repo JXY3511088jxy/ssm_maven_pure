@@ -3,13 +3,13 @@ package com.java.pojo;
 public class User {
 
     private int id;
-
+    //用户名
     private String uName;
-
+    //密码
     private String password;
-
+    //手机号码
     private String phone;
-
+    //地址
     private String address;
 
     public User() {

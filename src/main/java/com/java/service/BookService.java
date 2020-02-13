@@ -11,7 +11,8 @@ import java.util.Map;
  * date：17:20
  */
 public interface BookService {
-    List<Book> findBooks();
+    List<Book> listBooks();
+    List<Book> findBook(Book book);
     Book query(int id);
     void delete(int id);
     void add(Book book);

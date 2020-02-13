@@ -6,7 +6,8 @@ import com.java.pojo.User;
 import java.util.List;
 
 public interface UserService {
-    List<User> findUsers();
+    List<User> listUsers();
+    List<User> finduser(User user);
     User query(int id);
     void delete(int id);
     void add(User user);

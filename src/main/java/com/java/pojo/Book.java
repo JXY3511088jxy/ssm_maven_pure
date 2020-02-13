@@ -8,11 +8,11 @@ public class Book {
 
     private Float price;
 
-    private int num;
+    private Integer num;
 
     public Book(){};
 
-    public Book(int id, String bookName, Float price, int num) {
+    public Book(int id, String bookName, Float price, Integer num) {
         this.id = id;
         this.bookName = bookName;
         this.price = price;
@@ -43,11 +43,11 @@ public class Book {
         this.price = price;
     }
 
-    public int getNum() {
+    public Integer getNum() {
         return num;
     }
 
-    public void setNum(int num) {
+    public void setNum(Integer num) {
         this.num = num;
     }
 

@@ -17,7 +17,14 @@ public class UserController {
 
     @RequestMapping("listusers")
     public String listusers(Model model){
-        List<User> userList = userService.findUsers();
+        List<User> userList = userService.listUsers();
+        model.addAttribute("userList",userList);
+        return "admin/users/listUser";
+    }
+
+    @RequestMapping("findusers")
+    public String finduser(Model model,User user){
+        List<User> userList = userService.finduser(user);
         model.addAttribute("userList",userList);
         return "admin/users/listUser";
     }

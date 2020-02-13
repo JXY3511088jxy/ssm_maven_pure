@@ -39,7 +39,7 @@ public class BookController {
     @RequestMapping("/getBooks")
     public @ResponseBody List<Book> getBooks(){
 
-        List<Book> bookList = bookService.findBooks();
+        List<Book> bookList = bookService.listBooks();
 
         return bookList;
 
@@ -52,7 +52,15 @@ public class BookController {
      */
     @RequestMapping("/listBooks")
     public String listBooks(Model model){
-        List<Book> bookList = bookService.findBooks();
+        List<Book> bookList = bookService.listBooks();
+        model.addAttribute("bookList1",bookList);
+        //往前台传数据，可以传对象，可以传List，通过el表达式 ${}可以获取到，类似于request.setAttribute("sts",sts)效果一样。
+        return "admin/books/listBook";
+    }
+
+    @RequestMapping("/findBooks")
+    public String findBooks(Model model,Book book){
+        List<Book> bookList = bookService.findBook(book);
         model.addAttribute("bookList1",bookList);
         //往前台传数据，可以传对象，可以传List，通过el表达式 ${}可以获取到，类似于request.setAttribute("sts",sts)效果一样。
         return "admin/books/listBook";
@@ -100,7 +108,7 @@ public class BookController {
      * @param book
      * @return
      */
-    @RequestMapping("updateBooks")
+    @RequestMapping("/updateBooks")
     public String updateBooks(Book book){
         bookService.update(book);
         return "redirect:/listBooks";
